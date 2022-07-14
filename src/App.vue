@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" class="min-h-screen bg-gray-100">
     <NavbarMain />
-    <router-view />
+    <div class="container px-2 py-4 mx-auto sm:px-8">
+      <router-view />
+    </div>
   </div>
 </template>
 

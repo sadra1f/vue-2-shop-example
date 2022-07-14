@@ -16,7 +16,7 @@
 
   .nav-link {
     @apply py-1 transition rounded-md
-      hover:bg-neutral-100;
+      hover:bg-gray-100;
   }
 
   .nav-icons {

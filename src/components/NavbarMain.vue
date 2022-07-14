@@ -1,6 +1,6 @@
 <template>
-  <nav class="w-full px-8 py-4 bg-white border-b">
-    <div class="container flex items-center mx-auto">
+  <nav class="w-full py-4 bg-white border-b">
+    <div class="container px-2 flex items-center mx-auto sm:px-8">
       <div>
         <router-link :to="{ name: 'home' }" class="nav-title" exact>
           <h1 class="font-bold text-xl font-plus-jakarta-sans">Vue Shop</h1>
