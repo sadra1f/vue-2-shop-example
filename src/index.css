@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-title,
+  .nav-link {
+    @apply inline-block px-2 mx-2;
+  }
+
+  .nav-link {
+    @apply py-1 transition rounded-lg hover:bg-neutral-200;
+  }
+}
+
+html {
+  @apply scroll-smooth font-plus-jakarta-sans;
+}
