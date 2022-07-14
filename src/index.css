@@ -4,12 +4,17 @@
 
 @layer components {
   .nav-title,
-  .nav-link {
+  .nav-link,
+  .nav-icon {
     @apply inline-block px-2 mx-2;
   }
 
   .nav-link {
     @apply py-1 transition rounded-lg hover:bg-neutral-200;
+  }
+
+  .nav-icons {
+    @apply ml-auto;
   }
 }
 
