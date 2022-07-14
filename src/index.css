@@ -9,8 +9,14 @@
     @apply inline-block px-2 mx-2;
   }
 
+  .nav-title {
+    @apply transition-colors rounded-md bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text
+      hover:text-transparent;
+  }
+
   .nav-link {
-    @apply py-1 transition rounded-lg hover:bg-neutral-200;
+    @apply py-1 transition rounded-md
+      hover:bg-neutral-100;
   }
 
   .nav-icons {
