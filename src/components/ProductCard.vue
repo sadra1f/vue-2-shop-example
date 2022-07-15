@@ -18,7 +18,7 @@
       </p>
       <p class="pt-2" v-if="data.price && data.is_avalable">
         <span class="currency text-xs">$</span>
-        <span class="price">100</span>
+        <span class="price">{{ data.price }}</span>
       </p>
       <p class="pt-2" v-else>Unavailable</p>
     </div>
