@@ -1,19 +1,32 @@
 <template>
-  <nav class="w-full py-4 bg-white border-b">
-    <div class="container px-2 flex items-center mx-auto sm:px-8">
-      <div>
+  <nav class="sticky w-full py-4 bg-white border-b z-50 md:top-0">
+    <div
+      class="container px-4 flex flex-col items-center mx-auto sm:px-8 md:flex-row"
+    >
+      <div class="nav-main flex justify-between items-center">
         <router-link :to="{ name: 'home' }" class="nav-title" exact>
           <h1 class="font-bold text-xl font-plus-jakarta-sans">Vue Shop</h1>
         </router-link>
+
+        <button
+          class="cursor-pointer inline-block md:hidden"
+          @click="showLinks = !showLinks"
+        >
+          <MenuIcon v-if="!showLinks" />
+          <CloseIcon v-else />
+        </button>
       </div>
-      <div class="nav-links">
+      <div
+        class="nav-links text-center pt-2 transition-enable duration-300 overflow-hidden disable md:pt-0 md:enable"
+        :class="showLinks ? 'enable' : ''"
+      >
         <router-link :to="{ name: 'home' }" class="nav-link" exact>
           Home
         </router-link>
         <router-link :to="'#'" class="nav-link" exact> Products </router-link>
       </div>
       <div class="nav-icons">
-        <router-link :to="'#'" class="nav-icon" exact>
+        <router-link :to="'#'" class="nav-icon hidden md:inline-block" exact>
           <CartIcon />
         </router-link>
       </div>
@@ -23,9 +36,29 @@
 
 <script>
 import CartIcon from "./icons/CartIcon.vue";
+import MenuIcon from "./icons/MenuIcon.vue";
+import CloseIcon from "./icons/CloseIcon.vue";
 
 export default {
   name: "NavbarMain",
-  components: { CartIcon },
+  components: { CartIcon, MenuIcon, CloseIcon },
+  data() {
+    return {
+      BREAK_POINT: 768,
+      showLinks: false,
+    };
+  },
+  created() {
+    window.addEventListener("resize", this.resizeHandler);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.resizeHandler);
+  },
+  methods: {
+    resizeHandler(event) {
+      if (event.target.innerWidth >= this.BREAK_POINT && this.showLinks)
+        this.showLinks = false;
+    },
+  },
 };
 </script>
