@@ -1,6 +1,10 @@
 <template>
   <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-    <router-link v-for="product in products" :key="product.id" to="#">
+    <router-link
+      v-for="product in products"
+      :key="product.id"
+      :to="{ name: 'product', params: { slug: product.slug } }"
+    >
       <ProductCard :data="product" />
     </router-link>
   </div>
