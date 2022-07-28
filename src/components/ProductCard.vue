@@ -16,7 +16,7 @@
           }}
         </span>
       </p>
-      <p class="pt-2" v-if="data.price && data.is_avalable">
+      <p class="pt-2" v-if="data.price && data.is_available">
         <span class="currency text-xs">$</span>
         <span class="price">{{ data.price }}</span>
       </p>

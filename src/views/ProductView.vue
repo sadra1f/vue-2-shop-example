@@ -14,11 +14,11 @@
           to="#"
           class="block w-full p-2 mt-2 rounded transition text-center bg-neutral-700 text-white hover:bg-neutral-800"
           :class="
-            (product.price && product.is_avalable) ||
+            (product.price && product.is_available) ||
             'bg-neutral-400 pointer-events-none hover:bg-neutral-400'
           "
         >
-          <span v-if="product.price && product.is_avalable">
+          <span v-if="product.price && product.is_available">
             Add to Cart -
             <span class="currency text-xs">$</span>
             <span class="price">{{ product.price }}</span>

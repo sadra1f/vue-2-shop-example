@@ -1,0 +1,32 @@
+export const products = [
+  {
+    id: "0",
+    name: "Product 1",
+    slug: "product-1",
+    image: null,
+    alt: null,
+    description: "Just a short text.",
+    price: "9.99",
+    is_available: true,
+  },
+  {
+    id: "1",
+    name: "Product 2",
+    slug: "product-2",
+    image: null,
+    alt: null,
+    description: "Just a short text.",
+    price: "11.99",
+    is_available: false,
+  },
+  {
+    id: "2",
+    name: "Product 3",
+    slug: "product-3",
+    image: null,
+    alt: null,
+    description: "Just a short text.",
+    price: "24.99",
+    is_available: true,
+  },
+];
