@@ -24,8 +24,18 @@
           Home
         </router-link>
         <router-link :to="'#'" class="nav-link" exact> Products </router-link>
+
+        <router-link :to="'#'" class="nav-link inline-block md:hidden" exact>
+          Panel
+        </router-link>
+        <router-link :to="'#'" class="nav-link inline-block md:hidden" exact>
+          Cart
+        </router-link>
       </div>
       <div class="nav-icons">
+        <router-link :to="'#'" class="nav-icon hidden md:inline-block" exact>
+          <UserIcon />
+        </router-link>
         <router-link :to="'#'" class="nav-icon hidden md:inline-block" exact>
           <CartIcon />
         </router-link>
@@ -38,10 +48,11 @@
 import CartIcon from "./icons/CartIcon.vue";
 import MenuIcon from "./icons/MenuIcon.vue";
 import CloseIcon from "./icons/CloseIcon.vue";
+import UserIcon from "./icons/UserIcon.vue";
 
 export default {
   name: "NavbarMain",
-  components: { CartIcon, MenuIcon, CloseIcon },
+  components: { CartIcon, MenuIcon, CloseIcon, UserIcon },
   data() {
     return {
       BREAK_POINT: 768,
