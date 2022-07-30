@@ -27,7 +27,11 @@
           Products
         </router-link>
 
-        <router-link :to="'#'" class="nav-link inline-block md:hidden" exact>
+        <router-link
+          :to="{ name: 'panel' }"
+          class="nav-link inline-block md:hidden"
+          exact
+        >
           Panel
         </router-link>
         <router-link :to="'#'" class="nav-link inline-block md:hidden" exact>
@@ -35,7 +39,11 @@
         </router-link>
       </div>
       <div class="nav-icons">
-        <router-link :to="'#'" class="nav-icon hidden md:inline-block" exact>
+        <router-link
+          :to="{ name: 'panel' }"
+          class="nav-icon hidden md:inline-block"
+          exact
+        >
           <UserIcon />
         </router-link>
         <router-link :to="'#'" class="nav-icon hidden md:inline-block" exact>

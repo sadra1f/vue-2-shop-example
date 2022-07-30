@@ -45,3 +45,13 @@
 html {
   @apply scroll-smooth font-plus-jakarta-sans;
 }
+
+input,
+textarea,
+select {
+  @apply transition w-full h-10 my-2 p-2 bg-gray-100 rounded focus:outline-none focus:ring;
+}
+
+textarea {
+  @apply h-auto;
+}
