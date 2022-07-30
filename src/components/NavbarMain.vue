@@ -23,7 +23,9 @@
         <router-link :to="{ name: 'home' }" class="nav-link" exact>
           Home
         </router-link>
-        <router-link :to="'#'" class="nav-link" exact> Products </router-link>
+        <router-link :to="{ name: 'products' }" class="nav-link" exact>
+          Products
+        </router-link>
 
         <router-link :to="'#'" class="nav-link inline-block md:hidden" exact>
           Panel

@@ -15,7 +15,7 @@ import axios from "axios";
 import ProductCard from "../components/ProductCard.vue";
 
 export default {
-  name: "HomeView",
+  name: "ProductsView",
   components: { ProductCard },
   data() {
     return {
@@ -26,11 +26,7 @@ export default {
     axios
       .get("/products")
       .then((res) => {
-        if (res.data)
-          this.products =
-            typeof res.data.length != "undefined"
-              ? res.data.slice(0, 8)
-              : res.data;
+        if (res.data) this.products = res.data;
       })
       .catch((err) => console.error(err));
   },
