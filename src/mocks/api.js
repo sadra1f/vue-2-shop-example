@@ -28,6 +28,15 @@ const createMockServer = () => {
           is_available: product.is_available,
         };
       });
+
+      this.post("/products", (schema, request) => {
+        let attrs = JSON.parse(request.requestBody);
+        attrs.id =
+          new Date().getTime().toString() +
+          ("0000" + Math.floor(Math.random() * 100)).slice(-4);
+
+        return schema.create("product", attrs);
+      });
     },
     seeds(server) {
       products.forEach((item) => {

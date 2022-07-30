@@ -81,6 +81,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "PanelView",
   data() {
@@ -104,8 +106,19 @@ export default {
     },
 
     submitHandler(e) {
+      axios.post("/products", {
+        name: this.name,
+        slug: this.slug,
+        image: this.image ?? null,
+        alt: this.alt ?? null,
+        description: this.description ?? null,
+        price: this.price,
+        is_available: this.isAvailable,
+      });
+
       e.preventDefault();
     },
+
     priceInputHandler() {
       this.price = this.price.replace(/[^0-9.]/g, "");
       while (/(.*[.].*[.].*)|(.*[.].{3,})/g.test(this.price))

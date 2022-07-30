@@ -49,7 +49,6 @@ export default {
     axios
       .get(`/products/${this.$route.params.slug}`)
       .then((res) => {
-        console.log(res.data);
         if (res.data) this.product = res.data;
       })
       .catch((err) => console.error(err));
